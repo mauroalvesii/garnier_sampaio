@@ -1,0 +1,282 @@
+/* Fonts, reset and general styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Rubik&display=swap');
+
+* {box-sizing: border-box; margin: 0; padding: 0;}
+li {list-style-type: none;}
+a {text-decoration: none;}
+h1, h2, h3 {font-family: 'Rubik', sans-serif;}
+p {font-family: 'Roboto Mono', monospace;}
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.cta {
+    margin: 0 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 2.28;
+    font-family: 'Roboto Mono', monospace;
+    border-radius: 20px;
+    display: inline-block;
+    padding: 0 14px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+/* ============================================================================================================================================= */
+
+/* Site header w/ navigation, hero and cta-buttons */
+
+/* Header */
+
+.head__container {
+    height: 600px;
+    background: linear-gradient(330deg,#15124b 10%,#4c50cc 60%,#7ac7eb 100%);
+}
+
+.header {
+    padding: 20px 10px;
+    width: 100%;
+    height: auto;
+    background-color: #15124b;
+}
+
+/* Navigation */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu {
+    position: absolute;
+    padding: 20px;
+    background-color: #4c50cc;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    left: -100%;
+    top: 4.20rem;
+    width: 100%;
+    height: 533px;
+    transition: 0.3s;
+    box-shadow: 0px 10px 27px rgba(0, 0, 0, 0.05);
+}
+.menu.active {left: 0;}
+.menu a {
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.logo {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: #fff;
+    text-transform: uppercase;
+}
+.logo span {font-weight: 100;}
+
+/* Hamburger */
+
+.hamburger {
+    display: block;
+    position: absolute;
+    margin: 0.5rem 1rem;
+    right: 0;
+    cursor: pointer;
+}
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.hamburger.active .bar:nth-child(2) {opacity: 0;}
+.hamburger.active .bar:nth-child(1) {
+    -webkit-transform: translateY(8px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3) {
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Hero */
+
+.hero {
+    width: 300px;
+    margin: 0 auto;
+}
+.hero__banner {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.hero h1 {margin-top: 2rem; color: #fff; text-align: center;}
+.hero p {margin-top: 1rem; color: #fff; text-align: center;}
+.hero__img {margin: 3rem auto; width: 150px;}
+
+.order__buttons {margin: 2rem auto 0; width: 280px;} /* no firefox tá um em cima do outro */
+
+/* ============================================================================================================================================= */
+
+/* Main section: Features, swiper (mobile), cards (tablet & desktop) and services block */
+
+.features__block,
+.marketing__block {width: 310px; margin: 3.5rem auto;}
+
+/* Features */
+
+.dot1, .dot2, .dot3, .dot4 {font-family: 'Rubik', sans-serif; font-size: 5rem; line-height: 2rem;}
+
+.dot1, .dot3 {color: #0b8dd8;}
+.dot2, .dot4 {color: #f86707;}
+
+/* Swiper (mobile) and cards (tablet & desktop) */
+
+.bouncy {animation: bouncy 5s infinite linear; position: relative;}
+@keyframes bouncy {
+    0%{top: 0em;}
+    40%{top: 0em;}
+    43%{top: -0.9em;}
+    46%{top: 0em;}
+    48%{top: -0.4em;}
+    50%{top: 0em;}
+    100%{top: 0em;}
+}
+.learn__more, .learn__more1 {animation-delay: 0.07s;}
+.learn__more2 {animation-delay: 0.14s;}
+.learn__more3 {animation-delay: 0.21s;}
+.learn__more4 {animation-delay: 0.28s;}
+.learn__more, .learn__more1, .learn__more2, .learn__more3, .learn__more4 {border: 2px solid #000; color: #000;}
+
+.fa-chess {color: #ffd000;}
+.fa-chart-line {color: #0ea1e6;}
+.fa-award {color: #dd0b0b;}
+.fa-headset {color: #444;}
+
+/* Swiper */
+
+.swiper {
+    max-width: 300px;
+    width: 100%;
+    height: 400px;
+    box-shadow: -2px -2px 4px #838080, -2px 2px 4px #838080;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+}
+
+.swiper__header {
+    position: relative;
+    height: 170px;
+    padding: 30px 30px 250px;
+    color: #000;
+}
+.swiper__title {
+    margin: 35px 0 20px;
+    font-size: 15px;
+    line-height: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 1em;
+}
+.swiper__subtitle {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.swiper__body {
+    position: relative;
+    margin-top: -6.5rem;
+    padding: 15px 10px 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Cards */
+
+.cards__section {display: none;}
+
+/* Marketing services */
+
+.marketing__block h2,
+.marketing__block p {padding: 10px 0;}
+
+.find__out {
+    margin: 1.5rem auto 2.5rem;
+}
+
+
+/* ============================================================================================================================================= */
+
+/* Footer section: Contact and navigation */
+
+footer {
+    background-color: #2f4f4f;
+    height: 200px;
+}
+
+.footer__container {
+    margin: 0 auto;
+    width: 300px;
+}
+
+.footer__logo h4 {
+    padding: 40px 10px 10px;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    text-align: center;
+    text-transform: uppercase;
+}
+.footer__logo span {font-weight: 100;}
+
+/* Footer social media */
+
+.socials__nav p {
+    padding: 10px;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+.socials {
+    margin: 0 auto;
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+}
+.fa-instagram {color: #ec3e78;}
+.fa-whatsapp {color: #05c73f;}
+.fa-facebook-f {color: #1681c9;}
+.fa-at {color: #e03b2f;}
+
+.fa-instagram, .fa-whatsapp, .fa-facebook-f, .fa-at {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 5px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+/* ============================================================================================================================================= */

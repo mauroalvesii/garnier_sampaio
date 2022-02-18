@@ -1,0 +1,117 @@
+@media only screen and (min-width: 768px) {
+
+    /* Navigation */
+
+    .menu {
+        position: initial;
+        padding: inherit;
+        width: initial;
+        height: unset;
+        background-color: inherit;
+        flex-direction: row;
+    }
+    .hamburger {
+        display: none;
+    }
+
+    /* Hero */
+
+    .hero {
+        width: 700px;
+    }
+
+    .hero__banner {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .hero h1 {width: 370px; text-align: left;}
+    .hero p {text-align: left;}
+
+    /* ========================================================================================================================================== */
+
+    /* Main section: Features, swiper (mobile), cards (tablet & desktop) and services block */
+
+    /* Features */
+
+    .features__block {
+        width: 720px;
+        margin: 0 0 2.5rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .dots {display: block;}
+
+    /* Swiper */
+
+    .swiper {display: none;}
+
+    /* Cards */
+
+    .cards__section {
+        display: block;
+    }
+
+    .cards__flex {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .cards__flex > .card {
+        flex: 1 1 200px;
+        margin: 10px;
+    }
+
+    /* até aqui tá tudo pronto, basicamente. Só terminar de estilizar os cards em si e ficar atento nas quebras dos breakpoints pra tablet (2x2) e desktop (1x4)... o negócio é que do jeito que tá, quando diminui a janela ele pular de 1x4 pra [1x3; 1x1] sendo que essa de baixo pega todo o width; só depois ele quebra pra 2x2. Portanto tirar essa quebra intermediária... Talvez seja uma solução aumentar o flex: 1 1 300px; por exemplo (não sei, tem que testar) */
+
+    /*
+    .swiper {
+        margin-top: 2rem;
+        max-width: 425px;
+        width: 100%;
+        height: 400px;
+    }
+    */
+
+    .card {
+        width: 300px;
+        height: 400px;
+        background: #fff;
+        text-align: center;
+        font-size: 18px;
+        box-shadow: -2px -2px 4px #838080, -2px 2px 4px #838080;
+    }
+
+    .card__header {
+        position: relative;
+        height: 170px;
+        padding: 30px 30px 250px;
+        color: #000;
+    }
+    .card__title {
+        margin: 35px 0 20px;
+        font-size: 15px;
+        line-height: 1.1em;
+        text-transform: uppercase;
+        letter-spacing: 1em;
+    }
+    .card__subtitle {
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    .card__body {
+        position: relative;
+        margin-top: -6.5rem;
+        padding: 15px 10px 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    /* Marketing services */
+}

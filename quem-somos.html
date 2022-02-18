@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font awesome icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css">
+
+    <!-- Mobile-first standard styles -->
+    <link rel="stylesheet" href="mobile-first.css">
+
+    <!-- Responsive, tablet and desktop media queries -->
+    <link rel="stylesheet" href="responsive.css">
+
+    <title>Garnier Sampaio | Quem Somos</title>
+</head>
+<body>
+
+    <!-- Site header w/ navigation -->
+    <div class="head_container">
+        <header class="header">
+            <nav class="nav">
+                <a href="index.html" class="logo">garnier<span class="logo_span">sampaio</span></a>
+                <ul class="menu">
+                    <li><a href="quem-somos.html" class="link">quem somos</a></li>
+                    <li><a href="projetos.html" class="link">projetos</a></li>
+                    <li><a href="contato.html" class="link">contato</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </header>
+    </div>
+
+    <!-- Main section: Text presentation and form -->
+    <main class="main_container">
+        <div class="wrapper about_us">
+            <h2>Quem somos</h2>
+
+            <p>Garnier Sampaio surgiu como idéia de negócio no período mais conturbado da pandemia de covid-19, entre 2020-21.</p>
+                
+            <p>Fatores como inúmeras empresas fechando suas operações, desemprego em massa e aceleração do uso de tecnologias disruptivas formaram a receita perfeita para uma nova abordagem empreendedora.</p>
+                
+            <p>Aqui na Garnier Sampaio desenvolvemos estratégias digitais para o pequeno empresário.</p>
+                
+            <p>Apresentamos soluções de websites, dando uma "cara" profissional ao seu negócio: e-Business, ou e-Commerce.</p>
+                
+            <p>Temos uma equipe criativa que desenvolve ações de marketing digital para converter possíveis interessados em clientes satisfeitos, aumentando as suas vendas e o alcance da sua marca.</p>
+                
+            <h3>Preencha o formulário abaixo e apresentaremos uma proposta de valor para o seu negócio!</h3>
+            
+            <form action="to_yet_define" method="post">
+                <ul>
+                    <li>
+                        <label for="business_name">Nome Empresarial</label>
+                        <input type="text" name="business_name" id="business_name">
+                    </li>
+                    <li>
+                        <label for="business_field">Ramo Empresarial</label>
+                        <input type="text" name="business_field" id="business_field">
+                    </li>
+                    <li>
+                        <label for="business_email">E-mail</label>
+                        <input type="email" name="business_email" id="business_email">
+                    </li>
+                    <li>
+                        <label for="website_type">Tipo de website</label>
+                        <select name="website_type" id="website_type">
+                            <option value="blank_field"></option>
+                            <option value="e_business">e-Business</option>
+                            <option value="e_commerce">e-Commerce</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="business_goal">Descreva-nos quais objetivos espera alcançar na sua empresa, com essa nova abordagem digital</label>
+                        <textarea name="business_goal" id="business_goal"></textarea>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer section: Navigation -->
+    <footer>
+        <div class="footer_container">
+            <section class="footer_block">
+                <h4>garnier<span>sampaio</span></h4>
+            </section>
+
+            <nav class="footer_nav">
+                <p>Siga-nos nas redes sociais</p>
+                <ul class="footer_socials">
+                    <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                    <li><a href=""><i class="fab fa-whatsapp"></i></a></li>
+                    <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href=""><i class="fas fa-at"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- Hamburger menu -->
+    <script src="hamburger.js"></script>
+
+</body>
+</html>
